@@ -1,7 +1,18 @@
 {
-"manifest_version": 3,
-"name": "ShikimoriStand",
-"action": {
-
-}
+  "manifest_version": 3,
+  "name": "ShikimoriStand",
+  "version": "1.0",
+  "icons": {
+    "16": "icon.png",
+    "32": "icon.png",
+    "64": "icon.png"
+  },
+  "action": {
+    "default_popup": "popup.html",
+    "type":"module"
+  },
+  "background": {"service_worker": "background.js"},
+  "permissions": ["tabs", "storage", "activeTab", "webRequest","background","identity"],
+  "host_permissions": ["*://shikimori.one/*"],
+  "update_url": "https://clients2.google.com/service/update2/crx"
 }
